@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension-point id="de.sjvie.extension_point_test" name="Extension Point Soeren" schema="schema/de.sjvie.extension_point_test.exsd"/>
+
+</plugin>

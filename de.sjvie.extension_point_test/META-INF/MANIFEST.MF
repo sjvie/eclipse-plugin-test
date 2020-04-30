@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Extension_point_test
+Bundle-SymbolicName: de.sjvie.extension_point_test;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: de.sjvie.extension_point_test.Activator
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime
+Bundle-RequiredExecutionEnvironment: JavaSE-11
+Automatic-Module-Name: de.sjvie.extension_point_test
+Bundle-ActivationPolicy: lazy
+Export-Package: de.sjvie.extension_point_test
