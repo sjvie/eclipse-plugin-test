@@ -32,7 +32,7 @@ public class Activator extends AbstractUIPlugin {
 		
 		IExtensionRegistry reg = Platform.getExtensionRegistry();
 		IExtensionPoint ep = reg.getExtensionPoint("de.sjvie.extension_point_test");
-		IExtension[] extensions = ep.getExtension();
+		IExtension[] extensions = ep.getExtensions();
 		for( int i = 0; i < extensions.length; i ++) {
 			IExtension ext = extensions[i];
 			IConfigurationElement[] ce = ext.getConfigurationElements();
