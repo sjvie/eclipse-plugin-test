@@ -1,5 +1,10 @@
 package de.sjvie.extension_point_test;
 
+import org.eclipse.core.runtime.IConfigurationElement;
+import org.eclipse.core.runtime.IExtension;
+import org.eclipse.core.runtime.IExtensionPoint;
+import org.eclipse.core.runtime.IExtensionRegistry;
+import org.eclipse.core.runtime.Platform;
 import org.eclipse.ui.plugin.AbstractUIPlugin;
 import org.osgi.framework.BundleContext;
 
@@ -24,6 +29,20 @@ public class Activator extends AbstractUIPlugin {
 	public void start(BundleContext context) throws Exception {
 		super.start(context);
 		plugin = this;
+		
+		IExtensionRegistry reg = Platform.getExtensionRegistry();
+		IExtensionPoint ep = reg.getExtensionPoint("de.sjvie.extension_point_test");
+		IExtension[] extensions = ep.getExtension();
+		for( int i = 0; i < extensions.length; i ++) {
+			IExtension ext = extensions[i];
+			IConfigurationElement[] ce = ext.getConfigurationElements();
+			for(int j = 0; j < ce.length; j ++) {
+				Object obj = ce[j].createExecutableExtension("class");
+				if (obj instanceof ExtensionInterface) {
+					System.out.println(((ExtensionInterface) obj).extensionMethod());
+				}
+			}
+		}
 	}
 
 	@Override
