@@ -5,14 +5,10 @@ import de.sjvie.extension_point_test.ExtensionInterface;
 public class FirstExtensionTest implements ExtensionInterface{
 
 	@Override
-	public String extensionMethod() {
-		return "first Method";
+	public String[] getNewInput() {
+		// TODO Auto-generated method stub
+		return new String[] {"AsD"};
 	}
 
-	@Override
-	public String secondMethod() {
-		return "second Method";
-	}
 	
-
 }
