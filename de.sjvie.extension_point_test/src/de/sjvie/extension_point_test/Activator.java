@@ -39,7 +39,7 @@ public class Activator extends AbstractUIPlugin {
 			for(int j = 0; j < ce.length; j ++) {
 				Object obj = ce[j].createExecutableExtension("class");
 				if (obj instanceof ExtensionInterface) {
-					System.out.println(((ExtensionInterface) obj).extensionMethod());
+					System.out.println(((ExtensionInterface) obj).getNewInput()[0]);
 				}
 			}
 		}

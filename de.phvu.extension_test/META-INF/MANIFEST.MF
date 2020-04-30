@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Extension_test
+Bundle-SymbolicName: de.phvu.extension_test;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: de.phvu.extension_test.Activator
+Require-Bundle: de.sjvie.extension_point_test;bundle-version="1.0.0",
+ org.eclipse.ui,
+ org.eclipse.core.runtime
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Automatic-Module-Name: de.phvu.extension_test
+Bundle-ActivationPolicy: lazy
+Import-Package: de.sjvie.extension_point_test
