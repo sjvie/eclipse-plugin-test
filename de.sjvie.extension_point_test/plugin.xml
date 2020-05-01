@@ -10,9 +10,9 @@
       </category>
       <view
             category="de.sjvie.extension_point_test.my_category"
-            class="de.sjvie.extension_point_test.LogView"
-            id="de.sjvie.extension_point_test.log_view"
-            name="Log View"
+            class="de.sjvie.extension_point_test.TestView"
+            id="de.sjvie.extension_point_test.test_view"
+            name="Test View"
             restorable="true">
       </view>
    </extension>

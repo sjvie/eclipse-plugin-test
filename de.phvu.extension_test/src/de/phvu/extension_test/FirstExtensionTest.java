@@ -17,10 +17,8 @@ public class FirstExtensionTest implements ExtensionInterface{
 	@Override
 	public void createChild(Composite parent) {
 		// TODO Auto-generated method stub
+		System.out.println("askldjakljd");
 		Label label = new Label(parent, SWT.LEFT);
 		label.setText("ALSKDLAK");
-		
 	}
-
-	
 }
