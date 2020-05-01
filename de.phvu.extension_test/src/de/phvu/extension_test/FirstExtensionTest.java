@@ -23,7 +23,6 @@ public class FirstExtensionTest implements ExtensionInterface{
 	@Override
 	public void createChild(Composite parent) {
 		// TODO Auto-generated method stub
-		System.out.println("askldjakljd");
 		Label label = new Label(parent, SWT.LEFT);
 		label.setText("Log start:");
 		
@@ -34,6 +33,8 @@ public class FirstExtensionTest implements ExtensionInterface{
 				switch(e.type) {
 				case SWT.Selection:
 					label.setText(label.getText()+"\nButton wurde geklickt");
+					parent.layout();
+					parent.redraw();
 				}
 			}
 		});
@@ -51,7 +52,11 @@ public class FirstExtensionTest implements ExtensionInterface{
 					dialog.setMessage("Do you really want to do this?");
 					int result = dialog.open();
 					
-					if(result == SWT.OK) label.setText("log emptied");
+					if(result == SWT.OK){
+						label.setText("log emptied");
+						parent.layout();
+						parent.redraw();
+					}
 				}
 			}
 		});

@@ -16,5 +16,29 @@
             restorable="true">
       </view>
    </extension>
+   <extension
+         point="org.eclipse.ui.commands">
+      <command
+            defaultHandler="de.sjvie.extension_point_test.ResetHandler"
+            id="de.sjvie.extension_point_test.reset_command"
+            name="Reset">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            allPopups="false"
+            locationURI="menu:org.eclipse.ui.main.menu">
+         <menu
+               id="de.sjvie.extension_point_test.testplugin"
+               label="TestPlugin">
+            <command
+                  commandId="de.sjvie.extension_point_test.reset_command"
+                  label="Reset Test Plugin"
+                  style="push">
+            </command>
+         </menu>
+      </menuContribution>
+   </extension>
 
 </plugin>
