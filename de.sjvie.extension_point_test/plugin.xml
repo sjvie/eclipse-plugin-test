@@ -2,5 +2,19 @@
 <?eclipse version="3.4"?>
 <plugin>
    <extension-point id="de.sjvie.extension_point_test" name="Extension Point Soeren" schema="schema/de.sjvie.extension_point_test.exsd"/>
+   <extension
+         point="org.eclipse.ui.views">
+      <category
+            id="de.sjvie.extension_point_test.my_category"
+            name="Plugin Test">
+      </category>
+      <view
+            category="de.sjvie.extension_point_test.my_category"
+            class="de.sjvie.extension_point_test.LogView"
+            id="de.sjvie.extension_point_test.log_view"
+            name="Log View"
+            restorable="true">
+      </view>
+   </extension>
 
 </plugin>
